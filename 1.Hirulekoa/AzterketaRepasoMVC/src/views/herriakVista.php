@@ -19,7 +19,7 @@
 
         //$herriakLista Controller-ean dago sortua
         foreach ($herriakLista as $lista) {
-            
+
             //echo htmlspecialchars($lista['izena']) . "<br>";
 
             echo '<option value="'.$lista['izena'].'">'.$lista['izena'].'</option>';
@@ -31,8 +31,10 @@
 
 <br>
 
+<div id="egunekoZerrenda"></div>
+
 <br>
-<button>Iragarpena</button>
+<button onclick="egunekoIragarpena()">Iragarpena eguneko</button>
 
 </body>
 </html>

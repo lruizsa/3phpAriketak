@@ -18,6 +18,15 @@ class HerriaController{
 
     }
 
+    public function egunekoIragarpenaList($id_herria){
+        
+        $herria = new Herria();
+        $herriakEguneko = $herria->getIragarpenEguna($id_herria);
+        
+        require_once '../views/herriakVista.php';
+
+    }
+
 }
 
 ?>

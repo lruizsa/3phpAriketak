@@ -8,8 +8,10 @@ use Controllers\HerriaController;
 
 // Inprimatu
 $herriaController = new HerriaController();
+
 $herriaListAll = $herriaController->listAll();
 
+$herriaEguneko = $herriaController->egunekoIragarpenaList($id_herria);
 
 
 ?>

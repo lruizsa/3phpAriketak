@@ -20,7 +20,13 @@ class Herria{
         return $stmt->fetchAll();
     }
 
-    
+    public function getIragarpenEguna($id_herria){
+        $stmt = $this->db->prepare("SELECT * FROM iragarpena_eguna WHERE herria_id = ?");
+        $stmt->execute([$id_herria]);
+        return $stmt->fetchAll();
+    }
+
+
     
 }
 
