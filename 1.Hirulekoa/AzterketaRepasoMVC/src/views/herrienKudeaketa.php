@@ -35,7 +35,15 @@
 <div id="egunekoZerrenda"></div>
 
 <br>
-<button>Iragarpena eguneko</button>
+<form action="../public/herriak_gehitu.php" method="POST">
+    <label for="izena">Gehitu Beste herri bat:</label>
+    <input type="text" name="izena" id="izena" required>
+    <button type="submit">Gehitu</button>
+</form>
+
+
+
+<button>Aldatu</button><br>
 
 </body>
 </html>

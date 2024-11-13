@@ -17,17 +17,23 @@ class Herria{
     public function getAll(){
         $stmt = $this->db->prepare("SELECT * FROM herria");
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetchAll(); //fetchAll da lista bat itzultzeko
     }
 
-    public function getIragarpenEguna($id_herria){
-        $stmt = $this->db->prepare("SELECT * FROM iragarpena_eguna WHERE herria_id = ?");
-        $stmt->execute([$id_herria]);
-        return $stmt->fetchAll();
+    public function gehituHerria($izena){
+        $query="INSERT INTO herria SET izena = :izena";
+        $stmt = $this->db->prepare($query);
+        $stmt -> bindParam(":izena",$izena, PDO::PARAM_STR);
+        return $stmt->execute();
     }
 
-
-    
+    public function ezabatuHerria($id){
+        $query="DELETE FROM herria WHERE id = :id";
+        $stmt = $this->db->prepare($query);
+        $stmt -> bindParam(":id",$id, PDO::PARAM_STR);
+        return $stmt->execute();
+    }
+        
 }
 
 

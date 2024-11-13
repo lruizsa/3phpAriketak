@@ -6,8 +6,10 @@ require_once '../controllers/herriakController.php';
 
 use Controllers\HerriaController;
 
-// Crear una instancia del controlador y llamar a listAll para mostrar la lista de herriak
+// Crear una instancia del controlador
 $herriaController = new HerriaController();
-$herriaController->listAll();
+
+$izena = $_POST['izena'];
+$herriaController->gehitu($izena);
 
 ?>
